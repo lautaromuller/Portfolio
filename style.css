@@ -42,7 +42,17 @@ section {
     flex-direction: column;
     justify-content: center;
     /* height: 80vh; */
-    padding: 7em 20vw;
+    padding: 7em 0;
+    /* margin: 0 20vw; */
+    width: 60%;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+@media (max-width: 830px){
+    section{
+        width: 90%;
+    }
 }
 
 
@@ -75,7 +85,7 @@ section {
     margin-top: 9em;
     width: 3em;
     height: 3em;
-    filter: drop-shadow(0 0 10px #0b0425);
+    filter: drop-shadow(0 0 0.625em #0b0425);
 }
 
 #seccion-bienvenida div img:hover {
@@ -105,7 +115,7 @@ h2 {
 .tecnologias img:hover{
     transform: scale(1.4,1.4);
     transition-duration: 0.3s;
-    filter: drop-shadow(0 0 10px #f3d08e);
+    filter: drop-shadow(0 0 0.625em #f3d08e);
 }
 
 .proyectos {
@@ -117,7 +127,7 @@ h2 {
 
 .proyecto {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 1.875em;
     justify-content: space-around;
     background-color: #17132b;
     padding: 0.9em;
@@ -125,6 +135,7 @@ h2 {
     text-align: center;
     min-height: 15em;
     width: 44em;
+    box-shadow: 0 0  0.938em 0.063em #332c57;
 }
 
 .proyecto .div-datos {
@@ -152,7 +163,7 @@ h2 {
     color: #cbc9db;
     font-size: 1.8em;
     font-weight: 400;
-    margin-bottom: 0.6em;
+    margin: 0.6em 0;
 }
 
 /* .proyecto h3 {
@@ -219,6 +230,7 @@ h2 {
 .tecnologias-usadas span {
     font-size: 0.8em;
     color: #d4d48f;
+    user-select: none;
 }
 
 .enlaces-proyecto {
@@ -296,7 +308,7 @@ h2 {
 }
 
 .contacto a:hover {
-    filter: drop-shadow(0 0px 5px #976a99);
+    filter: drop-shadow(0 0px 0.313em #976a99);
 }
 
 .contacto img {
@@ -310,7 +322,7 @@ h2 {
 }
 
 .fondoNav {
-    background-color: #00000030;
+    background-color: #18142950;
 }
 
 footer {
