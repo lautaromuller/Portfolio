@@ -1,17 +1,19 @@
 const descripciones = document.querySelectorAll('.descripcion')
 const proyectos = document.querySelectorAll('.proyecto')
 
+
+/// Mostrar descripción de proyectos
 proyectos.forEach(proyecto => {
     const idProyecto = proyecto.getAttribute('id')
-    let botonDesc = document.querySelector(`#${idProyecto} .ver-desc`)
-    botonDesc.addEventListener('click', (e => efectoProyecto(e, idProyecto, botonDesc)))
+    let botonDescripcion = document.querySelector(`#${idProyecto} .ver-desc`)
+    botonDescripcion.addEventListener('click', (e => efectoProyecto(e, idProyecto, botonDescripcion)))
 })
 
 function efectoProyecto(e, id, boton) {
     let proyectoFocus =  document.querySelector(`#${id} .imagen-proyecto`)
     let descripcionFocus =  document.querySelector(`#${id} .descripcion`)
     if (descripcionFocus.hasAttribute('hidden')) {
-        boton.textContent = 'Foto'
+        boton.textContent = 'Foto del proyecto'
         proyectoFocus.setAttribute('hidden', true)
         descripcionFocus.removeAttribute('hidden')
         descripcionFocus.classList.add('estilo-p')
@@ -24,7 +26,7 @@ function efectoProyecto(e, id, boton) {
     }
 }
 
-///////////////
+/// Efecto de navbar
 
 window.addEventListener('scroll', () => {
     let nav = document.getElementById('nav')
@@ -35,7 +37,7 @@ window.addEventListener('scroll', () => {
     }
 })
 
-//////////////
+/// Cambiar navbar enfocado
 
 const links = document.querySelectorAll('.ul-nav a[href^="#"]')
 
@@ -60,7 +62,7 @@ links.forEach(link => {
 })
 
 
-///////////////////////
+/// Cargar página en el mismo lugar que quedo
 
 window.addEventListener('load', () => {
     window.scrollTo(window.scrollX,window.scrollY)

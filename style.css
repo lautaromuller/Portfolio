@@ -41,12 +41,9 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* height: 80vh; */
     padding: 7em 0;
-    /* margin: 0 20vw; */
     width: 60%;
     margin: 0 auto;
-    /* background-color: red; */
 }
 
 @media (max-width: 830px){
@@ -145,20 +142,6 @@ h2 {
     text-align: center;
 }
 
-/* .proyecto{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #17132b;
-    box-shadow: 0 0  15px 1px #332c57;
-    height: 19em;
-    width: 16.5em;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 0.9em;
-    border-radius: 1em;
-} */
-
 .proyecto h3 {
     color: #cbc9db;
     font-size: 1.8em;
@@ -166,26 +149,12 @@ h2 {
     margin: 0.6em 0;
 }
 
-/* .proyecto h3 {
-    color: #cbc9db;
-    font-size: 1.2em;
-    font-weight: 100;
-    margin-bottom: 0.8em;
-} */
-
 .imagen-proyecto {
     opacity: 0.8;
     height: 15em;
     width: 25em;
     background-color: lightblue;
 }
-
-/* .imagen-proyecto {
-    opacity: 0.8;
-    width: 14.7em;
-    height: 9em;
-    background-color: lightblue;
-} */
 
 .ver-desc {
     font-size: 1.1em;
@@ -221,11 +190,6 @@ h2 {
     height: 2em;
     width: 2em;
 }
-
-/* .tecnologias-usadas img {
-    height: 1.2em;
-    width: 1.2em;
-} */
 
 .tecnologias-usadas span {
     font-size: 0.8em;
@@ -275,10 +239,6 @@ h2 {
     width: 9em;
 }
 
-/* #seccion-acercaDe {
-    height: 65vh;
-} */
-
 #seccion-acercaDe p {
     color: #dada98;
     font-family: Arial, Helvetica, sans-serif;
@@ -289,7 +249,6 @@ h2 {
 }
 
 #seccion-contacto {
-    /* height: 40vh; */
     padding-bottom: 15em;
     padding-top: 11em;
 }
