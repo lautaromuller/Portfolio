@@ -286,8 +286,9 @@ h2 {
 
 footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 5em;
+    margin: 0 150px;
 }
 
 footer span, footer a{
