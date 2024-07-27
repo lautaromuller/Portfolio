@@ -150,10 +150,15 @@ h2 {
 }
 
 .imagen-proyecto {
-    opacity: 0.8;
+    opacity: 1;
     height: 15em;
     width: 25em;
     background-color: lightblue;
+    border: 3px solid #211c3b;
+}
+
+.imagen-proyecto:hover{
+    opacity: 0.6;
 }
 
 .ver-desc {
