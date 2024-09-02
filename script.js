@@ -13,13 +13,13 @@ function efectoProyecto(e, id, boton) {
     let proyectoFocus =  document.querySelector(`#${id} .imagen-proyecto`)
     let descripcionFocus =  document.querySelector(`#${id} .descripcion`)
     if (descripcionFocus.hasAttribute('hidden')) {
-        boton.textContent = 'Foto del proyecto'
+        boton.textContent = 'Imagen del proyecto'
         proyectoFocus.setAttribute('hidden', true)
         descripcionFocus.removeAttribute('hidden')
         descripcionFocus.classList.add('estilo-p')
     }
     else {
-        boton.textContent = 'Descripción'
+        boton.textContent = 'Ver descripción'
         proyectoFocus.removeAttribute('hidden')
         descripcionFocus.setAttribute('hidden', true)
         descripcionFocus.classList.remove('estilo-p')
