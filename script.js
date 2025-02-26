@@ -12,22 +12,31 @@ proyectos.forEach(proyecto => {
 function efectoProyecto(e, id, boton) {
     let proyectoFocus =  document.querySelector(`#${id} .imagen-proyecto`)
     let descripcionFocus =  document.querySelector(`#${id} .descripcion`)
+    let tecnologiasUsadas = document.querySelector(`#${id} .tecnologias-usadas`)
+    let enlaces = document.querySelector(`#${id} .enlaces-proyecto`)
+    let titulo = document.querySelector(`#${id} .titulo-proyecto`)
     if (descripcionFocus.hasAttribute('hidden')) {
         boton.textContent = 'Imagen del proyecto'
         proyectoFocus.setAttribute('hidden', true)
         descripcionFocus.removeAttribute('hidden')
         descripcionFocus.classList.add('estilo-p')
+        tecnologiasUsadas.classList.remove('ocultar')
+        enlaces.classList.add('ocultar')
+        titulo.classList.add('ocultar')
     }
     else {
         boton.textContent = 'Ver descripción'
         proyectoFocus.removeAttribute('hidden')
         descripcionFocus.setAttribute('hidden', true)
         descripcionFocus.classList.remove('estilo-p')
+        tecnologiasUsadas.classList.add('ocultar')
+        enlaces.classList.remove('ocultar')
+        titulo.classList.remove('ocultar')
+        
     }
 }
 
 /// Efecto de navbar
-
 window.addEventListener('scroll', () => {
     let nav = document.getElementById('nav')
     if(window.scrollY > 0) {
@@ -38,7 +47,6 @@ window.addEventListener('scroll', () => {
 })
 
 /// Cambiar navbar enfocado
-
 const links = document.querySelectorAll('.ul-nav a[href^="#"]')
 
 const observador = new IntersectionObserver((entradas) => {
@@ -62,8 +70,7 @@ links.forEach(link => {
 })
 
 
-/// Cargar página en el mismo lugar que quedo
-
 window.addEventListener('load', () => {
     window.scrollTo(window.scrollX,window.scrollY)
 })
+

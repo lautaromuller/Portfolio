@@ -5,7 +5,7 @@
     color: #ecec7e;
 }
 
-html {
+body {
     scroll-behavior: smooth;
     background: linear-gradient(to bottom, #272146, #0d091f);
 }
@@ -89,6 +89,10 @@ section {
     filter: drop-shadow(0 0 0.8px #f3d08e);
 }
 
+a{
+    text-decoration: none;
+}
+
 h2 {
     font-size: 2.15em;
     padding-bottom: 1.3em;
@@ -117,21 +121,24 @@ h2 {
 
 .proyectos {
     display: flex;
+    align-items: space-around;
     justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    width: 105%;
+    margin-left: -2.5%;
 }
 
 .proyecto {
     display: flex;
+    flex-direction: column;
     margin-bottom: 1.875em;
     justify-content: space-around;
     background-color: #17132b;
     padding: 0.9em;
     border-radius: 1em;
     text-align: center;
-    min-height: 15em;
-    width: 44em;
+    min-height: 23em;
+    width: 24.5em;
     box-shadow: 0 0  0.938em 0.063em #332c57;
 }
 
@@ -144,17 +151,17 @@ h2 {
 
 .proyecto h3 {
     color: #cbc9db;
-    font-size: 1.8em;
+    font-size: 2.2em;
     font-weight: 400;
-    margin: 0.6em 0;
 }
 
-.img{
+.img, video{
     opacity: 1;
-    height: 15em;
-    width: 25em;
+    height: 13em;
+    width: 24em;
     background-color: lightblue;
     border: 3px solid #211c3b;
+    margin-bottom: 10px;
 }
 
 .img:hover{
@@ -163,15 +170,14 @@ h2 {
 
 .ver-desc {
     font-size: 1.1em;
-    margin-bottom: 2.5em;
+    margin-bottom: 1em;
 }
 
 .descripcion {
     color: #d4d48f;
     text-align: left;
-    font-size: 1em;
-    width: 25em;
-    height: 15em;
+    font-size: 1.1em;
+    padding: 0px 8px;
 }
 
 .estilo-p {
@@ -182,9 +188,9 @@ h2 {
 .tecnologias-usadas {
     display: flex;
     justify-content: center;
-    margin: auto;
     gap: 0.6em;
 }
+
 
 .tecnologias-usadas div {
     display: flex;
@@ -206,7 +212,8 @@ h2 {
     display: flex;
     padding: 0 1em;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 0.6em;
 }
 
 .codigo-proyecto:hover, .pagina-proyecto:hover {
@@ -244,7 +251,7 @@ h2 {
     width: 9em;
 }
 
-#seccion-acercaDe p {
+#seccion-sobreMi p {
     color: #dada98;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
@@ -306,4 +313,10 @@ footer span, footer a{
 .underline:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+
+
+.ocultar{
+    display: none;
 }
