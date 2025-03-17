@@ -25,7 +25,7 @@
             <h1>Lautaro Muller</h1>
             <p>Desarrollador <strong>Front-end</strong></p>
             <div>
-                <a href="mailto:lautaro8520@gmail.com">
+                <a href="#seccion-contacto">
                     <figure>
                         <img src="image/correo.png" alt="Mail"><figcaption>Gmail</figcaption>
                     </figure>
@@ -290,19 +290,28 @@
             </p>
         </section>
         <section id="seccion-contacto">
-            <h2>Contacto</h2>
-            <div class="contacto">
-                <a id="contacto" href="mailto:lautaro8520@gmail.com">
-                    <img src="image/correo.png" alt="Mail">Gmail</a>
-                <a href="https://www.linkedin.com/in/lautaro-muller-865311174/" target="_blank">
-                    <img src="image/linkedin.png" alt="Linkedin">Linkedin</a>
-                <a href="https://github.com/lautaromuller" target="_blank">
-                    <img src="image/github_icono.png" alt="Github">Github</a>
-                <a href="https://drive.google.com/file/d/17AJY46Vkp1O32T3vC-IPdpjTlqmlpkxS/view?usp=sharing"
-                    target="_blank">
-                    <img src="image/cv.png" alt="CV">CV</a>
-            </div>
+            <form action="https://formspree.io/f/meoaozpn" method="POST" class="form-contacto">
+                <h2 class="form-titulo">Contacto</h2>
+            
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+            
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+            
+                <button type="submit" class="submit-btn">Enviar</button>
+            </form>
         </section>
+
+        <div id="modal" class="modal">
+            <div class="modal-contenido">
+                <h2 id="modal-titulo"></h2>
+                <p id="modal-parrafo"></p>
+            </div>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>

@@ -17,23 +17,23 @@ header{
     z-index: 100;
 }
 
-nav ul {
+.ul-nav {
     display: flex;
     justify-content: center;
 }
 
-nav ul li {
+.ul-nav li {
     list-style: none;
 }
 
-nav ul li a {
+.ul-nav li a {
     padding: 1.1em 1.5em;
     font-size: 1.1em;
     line-height: 8vh;
     text-decoration: none;
 }
 
-nav ul li a:hover {
+.ul-nav li a:hover {
     background-color: #3c355f;
 }
 
@@ -60,11 +60,13 @@ section {
 #seccion-bienvenida h1{
     font-size: 4.5em;
     padding-top: 8vh;
+    user-select: none;
 }
 
 #seccion-bienvenida p{
     font-size: 1.5em;
     font-weight: 400;
+    user-select: none;
 }
 
 #seccion-bienvenida div {
@@ -96,6 +98,7 @@ a{
 h2 {
     font-size: 2.15em;
     padding-bottom: 1.3em;
+    user-select: none;
 }
 
 .tecnologias{
@@ -142,7 +145,7 @@ h2 {
     box-shadow: 0 0  0.938em 0.063em #332c57;
 }
 
-.proyecto .div-datos {
+.div-datos {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -153,10 +156,11 @@ h2 {
     margin-bottom: 20px;
 }
 
-.proyecto h3 {
+.titulo-proyecto {
     color: #cbc9db;
     font-size: 2.2em;
     font-weight: 400;
+    user-select: none;
 }
 
 .img, video{
@@ -194,7 +198,6 @@ h2 {
     justify-content: center;
     gap: 0.6em;
 }
-
 
 .tecnologias-usadas div {
     display: flex;
@@ -239,20 +242,20 @@ h2 {
     width: 2.3em;
 }
 
-.proyecto a {
-    text-decoration: none;
-    line-height: 2.3em;
-    padding: 0.2em;
-    color: #fff;
-    font-weight: 600;
-}
-
 .pagina-proyecto {
     background-color: #3e385f;
     border: none;
     border-radius: 1.25em;
     cursor: pointer;
     width: 9em;
+}
+
+.proyecto a {
+    text-decoration: none;
+    line-height: 2.3em;
+    padding: 0.2em;
+    color: #fff;
+    font-weight: 600;
 }
 
 #seccion-sobreMi p {
@@ -269,28 +272,102 @@ h2 {
     padding-top: 11em;
 }
 
-.contacto {
-    display: flex;
+.form-contacto {
+    background-color: #1e1e1e;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form-titulo {
+    text-align: center;
+    color: #dbaf2c;
+    font-size: 2rem;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    display: block;
+    color: #A5A5A5;
+}
+
+input, textarea {
+    width: 96.5%;
+    padding: 8px 0;
+    padding-left: 3.5%;
+    margin-bottom: 20px;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #EAEAEA;
+    font-size: 1rem;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #A5A5A5;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #a7841a;
+    background-color: #262626;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #dbaf2c;
+    color: #121212;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #f1bb18;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 5vw;
+    z-index: 9999;
 }
 
-.contacto a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+.modal-contenido {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
 }
 
-.contacto a:hover {
-    filter: drop-shadow(0 0px 0.313em #976a99);
+#modal-titulo {
+    color: #dbaf2c;
+    font-size: 2rem;
+    margin-bottom: -15px;
 }
 
-.contacto img {
-    width: 2.5em;
-    height: 2.5em;
-    padding-right: 0.62em;
+#modal-parrafo {
+    color: #666;
+    font-size: 1rem;
 }
+
 
 .colorNav {
     background-color: #3f385e;
@@ -298,16 +375,6 @@ h2 {
 
 .fondoNav {
     background-color: #18142950;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 150px -160px 150px;
-}
-
-footer span, footer a{
-    color: #c1c1c5e6;
 }
 
 .underline {
@@ -318,8 +385,6 @@ footer span, footer a{
     cursor: pointer;
     text-decoration: underline;
 }
-
-
 
 .ocultar{
     display: none;

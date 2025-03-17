@@ -74,3 +74,55 @@ window.addEventListener('load', () => {
     window.scrollTo(window.scrollX,window.scrollY)
 })
 
+
+const form = document.querySelector('.form-contacto');
+const submitBtn = document.querySelector('.submit-btn');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault()
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...'
+
+    const formData = new FormData(form)
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            openModal("¡Gracias por el mensaje!", "Te responderé a la brevedad.")
+            form.reset()
+        } else {
+            openModal("¡Ups!", "Hubo un error al enviar el formulario. Intenta nuevamente.")
+        }
+    })
+    .catch(error => {
+        openModal("¡Ups!", "Hubo un error al enviar el formulario. Intenta nuevamente.")
+    })
+    .finally(() => {
+        submitBtn.disabled = false
+        submitBtn.textContent = 'Enviar'
+    });
+});
+
+function openModal(titulo,parrafo) {
+    const modal = document.getElementById('modal');
+    const modalTitulo = document.getElementById('modal-titulo');
+    const modalParrafo = document.getElementById('modal-parrafo');
+
+    modalTitulo.textContent = titulo;
+    modalParrafo.textContent = parrafo;
+
+    modal.style.display = 'flex';
+
+    setTimeout(function() {
+        closeModal();
+    }, 5000); 
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal')
+    modal.style.display = 'none'
+}
