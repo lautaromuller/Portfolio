@@ -149,6 +149,10 @@ h2 {
     text-align: center;
 }
 
+.tecnologias-usadas {
+    margin-bottom: 20px;
+}
+
 .proyecto h3 {
     color: #cbc9db;
     font-size: 2.2em;
