@@ -88,18 +88,19 @@ form.addEventListener('submit', function(event) {
 
     fetch(form.action, {
         method: 'POST',
-        body: formData
+        body: formData,
+        mode: 'no-cors'
     })
     .then(response => {
         if (response.ok) {
-            openModal("¡Gracias por el mensaje!", "Te responderé a la brevedad.")
+            abrirModal("¡Gracias por el mensaje!", "Te responderé a la brevedad.")
             form.reset()
         } else {
-            openModal("¡Ups!", "Hubo un error al enviar el formulario. Intenta nuevamente.")
+            abrirModal("¡Ups!", "Hubo un error al enviar el formulario. Intenta nuevamente.")
         }
     })
     .catch(error => {
-        openModal("¡Ups!", "Hubo un error al enviar el formulario. Intenta nuevamente.")
+        cerrarModal("¡Ups!", "Hubo un error al enviar el formulario. Intenta nuevamente.")
     })
     .finally(() => {
         submitBtn.disabled = false
@@ -107,7 +108,7 @@ form.addEventListener('submit', function(event) {
     });
 });
 
-function openModal(titulo,parrafo) {
+function abrirModal(titulo,parrafo) {
     const modal = document.getElementById('modal');
     const modalTitulo = document.getElementById('modal-titulo');
     const modalParrafo = document.getElementById('modal-parrafo');
@@ -118,11 +119,11 @@ function openModal(titulo,parrafo) {
     modal.style.display = 'flex';
 
     setTimeout(function() {
-        closeModal();
+        cerrarModal();
     }, 5000); 
 }
 
-function closeModal() {
+function cerrarModal() {
     const modal = document.getElementById('modal')
     modal.style.display = 'none'
 }
