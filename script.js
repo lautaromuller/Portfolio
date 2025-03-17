@@ -90,7 +90,7 @@ form.addEventListener('submit', function(event) {
         form.reset();
         submitBtn.disabled = false;
         submitBtn.textContent = 'Enviar';
-    }, 3000);
+    }, 2000);
 });
 
 function abrirModal(titulo,parrafo) {
@@ -105,7 +105,7 @@ function abrirModal(titulo,parrafo) {
 
     setTimeout(function() {
         cerrarModal();
-    }, 5000); 
+    }, 3000); 
 }
 
 function cerrarModal() {
