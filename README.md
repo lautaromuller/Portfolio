@@ -1,4 +1,4 @@
-# 🧑‍💻 Portfolio Personal – Lautaro Muller
+# Portfolio Personal – Lautaro Muller
 
 Este es mi portfolio personal desarrollado con React y Vite. Incluye una presentación sobre mí, mis proyectos destacados, y una forma de contacto directo.
 
@@ -15,6 +15,7 @@ Este es mi portfolio personal desarrollado con React y Vite. Incluye una present
 ## ✨ Secciones del portfolio
 
 - **Inicio:** presentación personal y redes
-- **Sobre mí:** breve descripción de mi perfil profesional
+- **Tecnologías:** Stack tecnológico
 - **Proyectos:** galería interactiva con enlaces a repos y demos
+- **Sobre mí:** breve descripción de mi perfil profesional
 - **Contacto:** formulario funcional con envío de correos
