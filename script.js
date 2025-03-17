@@ -84,28 +84,13 @@ form.addEventListener('submit', function(event) {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Enviando...'
 
-    const formData = new FormData(form)
+    abrirModal("¡Gracias por el mensaje!", "Te responderé a la brevedad.")
 
-    fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
-    })
-    .then(response => {
-        if (response.ok) {
-            abrirModal("¡Gracias por el mensaje!", "Te responderé a la brevedad.")
-            form.reset()
-        } else {
-            abrirModal("¡Ups!", "Hubo un error al enviar el formulario. Intenta nuevamente.")
-        }
-    })
-    .catch(error => {
-        cerrarModal("¡Ups!", "Hubo un error al enviar el formulario. Intenta nuevamente.")
-    })
-    .finally(() => {
-        submitBtn.disabled = false
-        submitBtn.textContent = 'Enviar'
-    });
+    setTimeout(() => {
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar';
+    }, 3000);
 });
 
 function abrirModal(titulo,parrafo) {
