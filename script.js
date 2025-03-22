@@ -10,8 +10,8 @@ proyectos.forEach(proyecto => {
 })
 
 function efectoProyecto(e, id, boton) {
-    let proyectoFocus =  document.querySelector(`#${id} .imagen-proyecto`)
-    let descripcionFocus =  document.querySelector(`#${id} .descripcion`)
+    let proyectoFocus = document.querySelector(`#${id} .imagen-proyecto`)
+    let descripcionFocus = document.querySelector(`#${id} .descripcion`)
     let tecnologiasUsadas = document.querySelector(`#${id} .tecnologias-usadas`)
     let enlaces = document.querySelector(`#${id} .enlaces-proyecto`)
     let titulo = document.querySelector(`#${id} .titulo-proyecto`)
@@ -32,14 +32,14 @@ function efectoProyecto(e, id, boton) {
         tecnologiasUsadas.classList.add('ocultar')
         enlaces.classList.remove('ocultar')
         titulo.classList.remove('ocultar')
-        
+
     }
 }
 
 /// Efecto de navbar
 window.addEventListener('scroll', () => {
     let nav = document.getElementById('nav')
-    if(window.scrollY > 0) {
+    if (window.scrollY > 0) {
         nav.classList.add('fondoNav')
     } else {
         nav.classList.remove('fondoNav')
@@ -53,32 +53,32 @@ const observador = new IntersectionObserver((entradas) => {
     entradas.forEach((entrada) => {
         const id = entrada.target.getAttribute('id')
         const link = document.querySelector(`.ul-nav a[href="#${id}"]`)
-        
-        if(entrada.isIntersecting){
+
+        if (entrada.isIntersecting) {
             document.querySelector('nav a.colorNav').classList.remove('colorNav')
             link.classList.add('colorNav');
         }
     })
-}, {rootMargin: "-20% 0px -80% 0px"})
+}, { rootMargin: "-20% 0px -80% 0px" })
 
 links.forEach(link => {
     const info = link.getAttribute('href')
     const target = document.querySelector(info)
-    if(target) {
+    if (target) {
         observador.observe(target)
     }
 })
 
 
 window.addEventListener('load', () => {
-    window.scrollTo(window.scrollX,window.scrollY)
+    window.scrollTo(window.scrollX, window.scrollY)
 })
 
 
-const form = document.querySelector('.form-contacto');
+const form = document.getElementById('formulario');
 const submitBtn = document.querySelector('.submit-btn');
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault()
 
     submitBtn.disabled = true;
@@ -86,14 +86,42 @@ form.addEventListener('submit', function(event) {
 
     abrirModal("¡Gracias por el mensaje!", "Te responderé a la brevedad.")
 
-    setTimeout(() => {
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Enviar';
-    }, 2000);
+    const formData = new FormData(form);
+
+    // Usar fetch para enviar los datos a Formspree
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+    })
+        .then(response => {
+            if (response.ok) {
+                // Si la respuesta es exitosa, restablecer el formulario
+                setTimeout(() => {
+                    form.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar';
+                }, 2000);
+            } else {
+                // Si ocurre algún error, mostrar un mensaje de alerta
+                alert('Hubo un problema al enviar el formulario.');
+            }
+        })
+        .catch(error => {
+            // En caso de error en la solicitud fetch
+            console.error('Error:', error);
+            alert('Hubo un error al enviar el formulario.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Enviar';
+        });
+
+    // setTimeout(() => {
+    //     form.reset();
+    //     submitBtn.disabled = false;
+    //     submitBtn.textContent = 'Enviar';
+    // }, 2000);
 });
 
-function abrirModal(titulo,parrafo) {
+function abrirModal(titulo, parrafo) {
     const modal = document.getElementById('modal');
     const modalTitulo = document.getElementById('modal-titulo');
     const modalParrafo = document.getElementById('modal-parrafo');
@@ -103,9 +131,9 @@ function abrirModal(titulo,parrafo) {
 
     modal.style.display = 'flex';
 
-    setTimeout(function() {
+    setTimeout(function () {
         cerrarModal();
-    }, 3000); 
+    }, 3000);
 }
 
 function cerrarModal() {
