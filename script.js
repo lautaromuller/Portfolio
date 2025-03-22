@@ -86,39 +86,11 @@ form.addEventListener('submit', function (event) {
 
     abrirModal("¡Gracias por el mensaje!", "Te responderé a la brevedad.")
 
-    const formData = new FormData(form);
-
-    // Usar fetch para enviar los datos a Formspree
-    fetch(form.action, {
-        method: form.method,
-        body: formData,
-    })
-        .then(response => {
-            if (response.ok) {
-                // Si la respuesta es exitosa, restablecer el formulario
-                setTimeout(() => {
-                    form.reset();
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Enviar';
-                }, 2000);
-            } else {
-                // Si ocurre algún error, mostrar un mensaje de alerta
-                alert('Hubo un problema al enviar el formulario.');
-            }
-        })
-        .catch(error => {
-            // En caso de error en la solicitud fetch
-            console.error('Error:', error);
-            alert('Hubo un error al enviar el formulario.');
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Enviar';
-        });
-
-    // setTimeout(() => {
-    //     form.reset();
-    //     submitBtn.disabled = false;
-    //     submitBtn.textContent = 'Enviar';
-    // }, 2000);
+    setTimeout(() => {
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar';
+    }, 2000);
 });
 
 function abrirModal(titulo, parrafo) {
