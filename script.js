@@ -78,19 +78,44 @@ window.addEventListener('load', () => {
 const form = document.getElementById('formulario');
 const submitBtn = document.querySelector('.submit-btn');
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault()
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Enviando...'
+    submitBtn.textContent = 'Enviando...';
 
-    abrirModal("¡Gracias por el mensaje!", "Te responderé a la brevedad.")
+    const formData = new FormData(form);
 
-    setTimeout(() => {
-        form.reset();
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            abrirModal("¡Gracias por el mensaje!", "Te responderé a la brevedad.");
+            setTimeout(() => {
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar';
+            }, 2000);
+        } else {
+            response.json().then(data => {
+                console.error('Error en Formspree:', data);
+                alert(data.error || 'Hubo un problema al enviar el formulario.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar';
+            });
+        }
+    })
+    .catch(error => {
+        console.error('Error de red:', error);
+        alert('Hubo un error de red al enviar el formulario.');
         submitBtn.disabled = false;
         submitBtn.textContent = 'Enviar';
-    }, 2000);
+    });
 });
 
 function abrirModal(titulo, parrafo) {
