@@ -179,6 +179,7 @@ h2 {
 .ver-desc {
     font-size: 1.1em;
     margin-bottom: 1em;
+    margin-top: 10px;
 }
 
 .descripcion {
@@ -374,7 +375,7 @@ textarea {
 }
 
 .fondoNav {
-    background-color: #18142950;
+    background-color: #0a0811a4;
 }
 
 .underline {
