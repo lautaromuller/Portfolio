@@ -116,6 +116,18 @@ h2 {
     height: 7em;
 }
 
+.img-php {
+    width: 7em;
+    height: 5em !important;
+    margin-top: 1em;
+}
+
+.img-mysql {
+    width: 7em;
+    height: 4.5em !important;
+    margin-top: 1.25em;
+}
+
 .tecnologias img:hover{
     transform: scale(1.4,1.4);
     transition-duration: 0.3s;
@@ -208,6 +220,12 @@ h2 {
 .tecnologias-usadas img {
     height: 2em;
     width: 2em;
+}
+
+.img-php-icon {
+    width: 2em;
+    height: 1.3em !important;
+    margin-right: 4px;
 }
 
 .tecnologias-usadas span {

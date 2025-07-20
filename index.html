@@ -43,7 +43,7 @@
                         <figcaption>GitHub</figcaption>
                     </figure>
                 </a>
-                <a href="https://drive.google.com/file/d/17AJY46Vkp1O32T3vC-IPdpjTlqmlpkxS/view?usp=sharing"
+                <a href="https://docs.google.com/document/d/1GYMgrvDtgcpWWp1dEKTAVxP6ZCfUQyQE/edit?usp=drive_link&ouid=115406056646324192195&rtpof=true&sd=true"
                     target="_blank">
                     <figure>
                         <img src="image/cv.png" alt="CV">
@@ -56,23 +56,28 @@
             <h2>Tecnologías</h2>
             <div class="tecnologias">
                 <figure><img src="image/angular.png" alt="Angular"></figure>
-                <figure><img src="image/mysql.png" alt="MySQL"></figure>
+                <figure><img src="image/mysql.png" alt="MySQL" class="img-mysql"></figure>
                 <figure><img src="image/javascript.png" alt="JavaScript"></figure>
                 <figure><img src="image/react.png" alt="React"></figure>
                 <figure><img src="image/typescript.png" alt="TypeScript"></figure>
                 <figure><img src="image/python.png" alt="Python"></figure>
-                <figure><img src="image/git.png" alt="Git"></figure>
-                <figure><img src="image/github.png" alt="GitHub"></figure>
+                <figure><img src="image/php2.png" alt="PHP" class="img-php"></figure>
+                <figure><img src="image/csharp.png" alt="CSharp"></figure>
             </div>
         </section>
         <section id="seccion-proyectos">
             <h2>Proyectos</h2>
             <div class="proyectos">
-                <!-- SALA DE JUEGOS -->
-                <div id="proyecto8" class="proyecto proyecto8">
-                    <img id="img-p8" class="imagen-proyecto img" src="image/sala-de-juegos.png" alt="proyecto 8">
-                    <p class="descripcion" hidden>Sala de juegos donde se puede jugar: Buscaminas, Mayor o Menor, Ahorcado y preguntados. 
-                        Tiene tabla de puntuaciones manejada con Supabase y un chat para hablar con otros jugadores en tiempo real.</p>
+                <!-- CLINICA ONLINE -->
+                <div id="proyecto9" class="proyecto proyecto9">
+                    <img id="img-p9" class="imagen-proyecto img" src="image/clinica-online.png" alt="proyecto 9">
+                    <p class="descripcion" hidden>Solicitud y seguimiento de turnos, seteo horarios de entrada y salida de cada
+                        especialista, consultar historia clínica y ver gráficos de estadísticas.<br>
+
+                        Cuenta con encuesta de atención y reseña, Captcha, descarga de Excel
+                        y PDF para turnos, historial y gráficos.<br>
+
+                        La página tiene animaciones entre componentes, validaciones en formularios y pipes propias.</p>
                     <div class="div-datos">
                         <div class="tecnologias-usadas ocultar">
                             <div>
@@ -80,14 +85,53 @@
                                 <span>HTML</span>
                             </div>
                             <div>
-                                <img src="image/angular.png" alt="ANGULAR">
-                                <span>ANGULAR</span>
+                                <img src="image/typescript.png" alt="TypeScript">
+                                <span>TS</span>
+                            </div>
+                            <div>
+                                <img src="image/angular.png" alt="Angular">
+                                <span>Angular</span>
+                            </div>
+                        </div>
+                        <h3 class="titulo-proyecto">Clínica Online</h3>
+                        <p class="ver-desc underline">Ver descripción</p>
+                        <div class="enlaces-proyecto">
+                            <a class="codigo-proyecto"
+                                href="https://github.com/lautaromuller/lautaro-muller-clinica-online-2025"
+                                target="_blank"><img src="image/github_icono_blanco.png" alt="Github"></a>
+                            <a class="pagina-proyecto" href="https://lautaro-muller-clinica-online-2025.vercel.app/"
+                                target="_blank">Ver proyecto</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SALA DE JUEGOS -->
+                <div id="proyecto8" class="proyecto proyecto8">
+                    <img id="img-p8" class="imagen-proyecto img" src="image/sala-de-juegos.png" alt="proyecto 8">
+                    <p class="descripcion" hidden>Sala de juegos donde se puede jugar: Buscaminas, Mayor o Menor,
+                        Ahorcado y preguntados.
+                        Tiene tabla de puntuaciones manejada con Supabase y un chat para hablar con otros jugadores en
+                        tiempo real.</p>
+                    <div class="div-datos">
+                        <div class="tecnologias-usadas ocultar">
+                            <div>
+                                <img src="image/html.png" alt="HTML">
+                                <span>HTML</span>
+                            </div>
+                            <div>
+                                <img src="image/typescript.png" alt="TypeScript">
+                                <span>TS</span>
+                            </div>
+                            <div>
+                                <img src="image/angular.png" alt="Angular">
+                                <span>Angular</span>
                             </div>
                         </div>
                         <h3 class="titulo-proyecto">Sala de juegos</h3>
                         <p class="ver-desc underline">Ver descripción</p>
                         <div class="enlaces-proyecto">
-                            <a class="codigo-proyecto" href="https://github.com/lautaromuller/lautaromuller-saladejuegos-2025"
+                            <a class="codigo-proyecto"
+                                href="https://github.com/lautaromuller/lautaromuller-saladejuegos-2025"
                                 target="_blank"><img src="image/github_icono_blanco.png" alt="Github"></a>
                             <a class="pagina-proyecto" href="https://lautaromuller-saladejuegos-2025.vercel.app/juegos"
                                 target="_blank">Ver proyecto</a>
@@ -134,7 +178,7 @@
                     <div class="div-datos">
                         <div class="tecnologias-usadas ocultar">
                             <div>
-                                <img src="image/php.png" alt="PHP">
+                                <img src="image/php2.png" alt="PHP" class="img-php-icon">
                                 <span>PHP</span>
                             </div>
                             <div>
@@ -253,7 +297,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- FORMULARIO CRUD  -->
                 <div id="proyecto2" class="proyecto proyecto2">
                     <video class="imagen-proyecto" width="400" height="240"" controls muted poster="
@@ -321,8 +365,10 @@
         </section>
         <section id="seccion-sobreMi">
             <h2>Sobre mí</h2>
-            <p>Estoy cursando la Tecnicatura Universitaria en Programación en la Universidad Tecnológica Nacional (UTN), estoy en mi último cuatrimestre.<br><br>
-                Todavía no tengo experiencia laboral formal, pero sigo buscando poder entrar en el mundo IT. Mientras, sigo haciendo proyectos y mejorando mi stack tecnológico.
+            <p>Estoy cursando la Tecnicatura Universitaria en Programación en la Universidad Tecnológica Nacional (UTN),
+                estoy en mi último cuatrimestre.<br><br>
+                Todavía no tengo experiencia laboral formal, pero sigo buscando poder entrar en el mundo IT. Mientras,
+                sigo haciendo proyectos y mejorando mi stack tecnológico.
             </p>
         </section>
         <section id="seccion-contacto">
