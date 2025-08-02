@@ -1,8 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Onest Variable, system-ui, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #ecec7e;
+    transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -27,7 +28,7 @@ header{
 }
 
 .ul-nav li a {
-    padding: 1.1em 1.5em;
+    padding: 1.2em 1.5em;
     font-size: 1.1em;
     line-height: 8vh;
     text-decoration: none;
@@ -41,7 +42,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 7em 0;
+    padding: 9em 0;
     width: 60%;
     margin: 0 auto;
 }
@@ -88,7 +89,8 @@ section {
 }
 
 #seccion-bienvenida div img:hover {
-    filter: drop-shadow(0 0 0.8px #f3d08e);
+    filter: drop-shadow(0 0 0.8px #af883e);
+    transform: translateY(-10px) scale(1.2);
 }
 
 a{
@@ -129,9 +131,9 @@ h2 {
 }
 
 .tecnologias img:hover{
-    transform: scale(1.4,1.4);
+    transform: scale(1.4);
     transition-duration: 0.3s;
-    filter: drop-shadow(0 0 0.625em #f3d08e);
+    filter: drop-shadow(0 0 0.425em #f3d08e);
 }
 
 .proyectos {
@@ -154,7 +156,13 @@ h2 {
     text-align: center;
     min-height: 23em;
     width: 24.5em;
-    box-shadow: 0 0  0.938em 0.063em #332c57;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-6px);
+    filter: drop-shadow(0 0 0.8px #58379f);
 }
 
 .div-datos {
@@ -170,7 +178,7 @@ h2 {
 
 .titulo-proyecto {
     color: #cbc9db;
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: 400;
     user-select: none;
 }
@@ -192,11 +200,13 @@ h2 {
     font-size: 1.1em;
     margin-bottom: 1em;
     margin-top: 10px;
+    text-decoration: none;
+
 }
 
 .descripcion {
     color: #d4d48f;
-    text-align: left;
+    text-align: center;
     font-size: 1.1em;
     padding: 0px 8px;
 }
@@ -244,6 +254,7 @@ h2 {
 
 .codigo-proyecto:hover, .pagina-proyecto:hover {
     background-color: #655f8a;
+    transform: scale(1.06);
 }
 
 .codigo-proyecto {
@@ -275,6 +286,33 @@ h2 {
     padding: 0.2em;
     color: #fff;
     font-weight: 600;
+}
+
+.sobreMi-container {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.sobreMi-texto {
+  max-width: 600px;
+  flex: 1;
 }
 
 #seccion-sobreMi p {
@@ -326,7 +364,13 @@ input, textarea {
 }
 
 input::placeholder, textarea::placeholder {
-    color: #A5A5A5;
+    color: #777;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 input:focus, textarea:focus {
@@ -341,7 +385,7 @@ textarea {
 
 .submit-btn {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     background-color: #dbaf2c;
     color: #121212;
     font-size: 1.2rem;
@@ -351,7 +395,8 @@ textarea {
 }
 
 .submit-btn:hover {
-    background-color: #f1bb18;
+    background-color: #e4bb3d;
+    transform: scale(0.97);
 }
 
 .modal {
@@ -402,7 +447,9 @@ textarea {
 
 .underline:hover {
     cursor: pointer;
-    text-decoration: underline;
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 0.4px #000000);
+    font-weight: 600;
 }
 
 .ocultar{
