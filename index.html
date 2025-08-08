@@ -12,6 +12,7 @@
 <body>
     <header>
         <nav id="nav">
+            <button id="menu-toggle" aria-label="Abrir menú">☰</button>
             <ul class="ul-nav">
                 <li><a href="#seccion-bienvenida" class="colorNav">Inicio</a></li>
                 <li><a href="#seccion-tecnologias">Tecnologías</a></li>
@@ -23,6 +24,7 @@
     </header>
     <main>
         <section id="seccion-bienvenida">
+            <img src="image/foto-perfil.png" alt="Foto de perfil" id="foto-pf">
             <h1>Lautaro Muller</h1>
             <p>Desarrollador web <strong>Full-Stack</strong></p>
             <div>
@@ -365,7 +367,7 @@
                     max="9999999999">
 
                 <label for="message">Mensaje</label>
-                <textarea id="message" name="message" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+                <textarea id="message" name="message" placeholder="Dejame tu mensaje" rows="4" required></textarea>
 
                 <button type="submit" class="submit-btn">Enviar</button>
             </form>

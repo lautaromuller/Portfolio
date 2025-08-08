@@ -137,3 +137,16 @@ function cerrarModal() {
     const modal = document.getElementById('modal')
     modal.style.display = 'none'
 }
+
+
+
+const toggleBtn = document.getElementById('menu-toggle');
+const navList = document.querySelector('.ul-nav');
+const header = document.querySelector('header');
+
+
+    toggleBtn.addEventListener('click', () => {
+        header.classList.toggle('menu-abierto');
+        navList.classList.toggle('active');
+        toggleBtn.classList.toggle('menu-abierto');
+    });
